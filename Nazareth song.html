@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Igitabo cy'Indirimbo za Chorale Nazareth</title>
+  <link rel="manifest" href="manifest.json">
   <style>
     body {
       font-family: sans-serif;
@@ -69,6 +70,18 @@
     button:hover {
       background-color: #2c2e7a;
     }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #e8eaf6;
+      font-size: 0.8rem;
+      color: #666;
+      animation: fadeIn 2s ease-in-out infinite alternate;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0.3; }
+      to { opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -80,8 +93,8 @@
       <input type="text" class="search-box" placeholder="Shaka indirimbo..." onkeyup="searchSongs()" />
       <div id="songList"></div>
       <div class="pagination">
-        <button onclick="prevPage()">Previous</button>
-        <button onclick="nextPage()">Next</button>
+        <button onclick="prevPage()">Ibanze</button>
+        <button onclick="nextPage()">Ikurikira</button>
       </div>
     </div>
     <div class="content" id="songContent">
@@ -89,6 +102,9 @@
       <p>Kanda ku ndirimbo iri ibumoso kugira ngo uyisome hano.</p>
     </div>
   </main>
+  <footer>
+    Igitabo cyakozwe na <span style="color: #999;">MUGISHA &amp; NSHIMIYIMANA</span>
+  </footer>
 
   <script>
     const songs = [
@@ -554,75 +570,99 @@ Akatubumburira igitabo cy’amazina yacu tuzapimirwa imirimo twakoreye muriyisi.
 
   {
     id: 67,
-    title: "67HANYUMA NYUMA Y’IBI BYOSE",
+    title: "67.UWITEKA N’INTWARI MUNTAMBARA",
     category: "Ibyiringiro",
-    lyrics: `1. Hanyuma nyuma y’ibi byose tuzabonana n’uwadukunze aritangira, uzambazwa, azambaza abamukoreye umurimo neza, yiteguye kuduhemba iteka.
+    lyrics: `1. Uwiteka ni ntwari mu ntambara niwe wambukije abisiraheri ya nyanja ubwo ibasha babo bari ababakurikiye ukuboko kwe kwarahabonetse.
 
-Chorus: Hanyuma tuzatura imbere y’intebe ye tukambikwa amakamba meza twaremewe kuva kera azavugako twatsinze. Mbega ibyiza bizaba biryoheye umutima.
+                                     Chorus:  nimushime uwiteka kuko ari mwiza niwe waremye isi kandi arema ijuru ashyiraho n’iherezo ryabyo.
 
-2. Tuzambikwa imyambaro itukura n’amakamba y’icyubahiro. Tuzabonana n’abakunzi b’Imana, abamarayika, n’abera, duhamya ko twanesheje isi n’umwanzi satani.
+2. Ninde warondora imigambi ye iyo akinze ntawe ubasha gukingura iyo akinguye ntawe ubasha gukinga kuko  ari uwiteka imana ikomeye.
 
-3. Dore igihe kiraje cyo gusezera isi, tukajya kwibanira n’umwami. Tuzaririmba indirimbo nshya yo kunesha. Ntiwacikwe! Komera, haracyari umwanya.`
+3. Nicyo gituma tutazatinya naho iyisi yahinda imishyitsi naho imisozi yakurwa ahayo abamwizera azaturwanirira. 
+`
   },
   {
     id: 68,
-    title: "68.TURIRIMBIRE UMWAMI",
+    title: "68.YEMWE BENE DATA BAKUNDWA N’IMANA",
     category: "Guhimbaza",
-    lyrics: `1. Turirimbire umwami tunezerewe, kuko yaducunguye atugura amaraso. Aduhindura abera, twari abacumuzi, none turabera be, dufite amahoro.
+    lyrics: `1. Yemwe bene data bakundwa n’imana nimukomere mutanyeganyega murushaho iteka gukorera umwami kuko umuhati wanyu si ubusa kumwami.
 
-Chorus: Haleluya turamushima, arakwiye ishimwe ryose. Imana yo ku buturo bwo hejuru, urukundo rwawe ruradukiza.
+                                   Chorus: igihe kizagera bene data tujye guuhemberwa ibyo twakoreye yesu azatwambika amakamba atatseho inyenyeri
 
-2. Yaturemye mu ishusho ye, aradukunda cyane, atwitaho nk’abana be. Niyo twaba mu kaga, aratuba hafi, ntabwo adutererana, atwitaho nk’umubyeyi.`
+2. Nubwo turi muri iyisi ntiturwana nkabiyisi ntitugomba misire cg bombe atomic ahubwo turwana nimyuka yo mukirere niyo mpamvu tubwirwango subusa kumwami
+
+3. Nuko rero bene data iherezo rya byose ryaje none mugire umwete wo gukorera umwami buri wese azahemberwa ibyo yakoze none nshuti bene data dushonje duhishiwe.
+
+                                           Chorus:  bene data icyo nifuza niki kuzababonayo murirmba nta magambo ateye isoni abayo nta mfubyi zihakubitirwa .nahantu ho kwifuzwaX3
+`
   },
   {
     id: 69,
-    title: "69.UMUCUNGUZI",
+    title: "69.NIMWUMVE INKURU NZIZA",
     category: "Gucungurwa",
-    lyrics: `1. Umucunguzi wanjye ndamukesha byose, ndashima ko yankuye mu mwijima. Nari naratakaye mu byaha, ariko we arankiza, ankiza n’ubu.
+    lyrics: `
+1. Nimwumve inkurur nziza yesu umwami w’abami yatuvukiye yavukiye ahantu hagayitse kandi yari umwami 
 
-Chorus: Yesu niwe mucunguzi, ntawundi nkawe, amaraso ye niyo anza neza imbere y’Imana Data. Nishimiye ko ndi uwe.
+                                 Chorus:  yicishije bugufi aza muri iyisi yigira umuntu abyarwa numwari maria kugirango adukize avukira ahagayitse.
 
-2. Ndakuririmbira iteka, mukiza wanjye, sinzibagirwa ineza wagiriye umutima wanjye. Uyu munsi ndatekanye, ejo hazaza ndahamenye, kuko uri kumwe nanjye.`
+2. Nimuze turirimbe kandi tunezerwe twifatanye n’ibizim n’abakuru  kumuhimbaza abakomeye n’aborohje ni muze tumushime byahanuwe kuva kera bisohoye mu bantu.
+
+3. Dore umukiza yesu yatuvukiye azitwa igitangaza umwami wamahoro kungoma ibihe bidashira kandi ubutware bwose buri ku bitugu bye.
+`
   },
   {
     id: 70,
-    title: "70.IBIHE BIRAHINDUKA",
+    title: "70.UKUVUKA K’UMWAMI WACU YESU.",
     category: "Guhumuriza",
-    lyrics: `1. Ibihe birahinduka, ariko Imana ntihinduka. Nubwo isi ihindagurika, we aracyari uwo kwizerwa. Nubwo umutima unanirwa, ndamwizera.
+    lyrics: `1. Ukuvuka k’umwami wacu yesu malayika yarabivuze abahanuzi barabihanura ko hazavuka umwami w’amahoro
 
-Chorus: Komera nshuti, Yesu aracyariho, agukunda, agukomeza. Ntutinye ibihe, kuko byose biri mu maboko ye.
+                          Chorus:  abantu bose bajya kumuramya X2 bajyanye amaturo izahabu ni shangi kuko ar’umwami w’amahoro
 
-2. Iyo binaniye umuntu, Imana ibasha byose. Yarebye kure aturema, azi byose. Ihangane, ibyiza biri imbere, akomeza inzira yawe.`
+2. Ibeterehemu haturutse haturutse iki umwami yesu niho yavukiye yaryamishijwe mu muvure w’inka kandi ari umwana w’isumba byose.
+
+3. Numunzero kubantu bose kuko umwami yesu yavutse gishyitsi cyo mumuryango wa dawidi uwo niwe wimye ingoma.
+`
   },
   {
     id: 71,
-    title: "71.YESU ARAHARI",
+    title: "71.MWIJURU ICYUBAHIRO KIBA ICY’IMANA",
     category: "Guhumuriza",
-    lyrics: `1. Yesu arahari, ntatezuka, iyo unaniwe agufasha. Iyo utagishoboye gutambuka, araguterura, agukomeza urugendo.
+    lyrics: `71.  MWIJURU ICYUBAHIRO KIBA ICY’IMANA
 
-Chorus: Yesu aracyari hafi, aho uri hose. Ibuka ko ari inshuti yawe, aguhagararaho igihe cyose.
+1. Mw’ijuru icyubahiro kibe icy’imana mu isi amahoro ab mubo yishimira gushimwa kuramywa no gupfukamirwa ni byawe mwami w’abami.
 
-2. Mu burwayi no mu buzima, mu byishimo no mu marira, Yesu ni we gisubizo. Nta we yigeze atererana. Kumwizera ni amahitamo meza.`
+                                    Chorus:  yatuvukiye X2 duhawe umwana w’umuhungu azitwa igitangaza umwami w’amahoro ubutware bwose nubwe.
+
+2. Abanyabwenge bajya kumuramya   kumushakisha kwa Herode Herode ararakara ategeka ko bica abana b’abahungu ariko yesu umwami ni muzima.
+
+3. Iyo avukira kwa herode abakene ntibari kuzamubona tumushime ntarobanura abakire abakne araringaniza.
+`
   },
   {
     id: 72,
-    title: "72.NIMWEMEZE UMUTIMA",
+    title: "72.NKUKO IMISOZI IGOSE I YERUSALMU.",
     category: "Gusaba imbabazi",
-    lyrics: `1. Nimwemeze umutima, mugarukire uwiteka. Yiteguye kubabarira, gukiza no guhindura. Yashimye ineza aho kurimbuka kw’umunyabyaha.
+    lyrics: `1. Nkuko imisozi igose I yerusalemu niko uwiteka agose abantu be uhereye none ukageza itka ryose abamumwiringiye kumusozi siyoni.
 
-Chorus: Garuka mu rukundo rwa mbere, aho wabonaga Yesu nk’umwami n’umukiza. Yagukunze mbere y’uko umumenya.
+                                     Chorus:   ntayindi mana ihwanye naweX2 icyubahiro ishimwe ni byawe.
 
-2. Kuko icyaha gitandukanya n’Imana, ntukagihishire. Fungura umutima, yiteguye kwakira abahindutse.`
+2. Iyo utaba muruhande rwacu mana ababisha baba baratwishimye hejuru wagaragje  ukunesha kwawe uhimbarizwe ukugira neza kwawe 
+
+3. Imirimo yawe ntabwo irondoreka imigambi yawe ni myiza kuri twe waraturinze muruyu mwaka ushize tukuragije nuyu uri imbere.
+`
   },
   {
     id: 73,
-    title: "73.NDARIRIMBA YESU",
+    title: "73.UMWAMI WACU NYIRI UBUBASHA.",
     category: "Guhimbaza",
-    lyrics: `1. Ndaririmba Yesu, kuko yankunze, ntaho yansize. Yambereye inshuti idahinduka, nubwo isi yagiye inyitaho gake.
+    lyrics: `1. Umwami wacu nyiri ububasha n’ubushobozi tugushimiye ibyo wakoz none turangije uyu mwaka wose turi amahoro ishimwe ni iryawe.
 
-Chorus: Yesu ni we ndirimbo yanjye, niwe mukiza wanjye. Muri byose ndamwiringira, umutima wanjye uratuje.
+                                     Chorus:   reba mwami abasubiye inyuma bacitse intege bava murugendo ubatugarurire ubahe imbaraga maze dufatanye uru rugendo.
 
-2. Nta kindi nshaka n’iki gihe, keretse kuba muri we. Yanyeretse urugero rw’ukuri, ndamukurikira.`
+2. Uriki muri iyi si wahuye nibikomeye ariko ukomeza kwihangana urwana intambara ustinda satani kumugaragaro uramunesha ishimwe ni ryawe.
+
+3. Kubw’ibyo ywmwe bana b’abantu ni mwumvire imana dutangire uyu mwaka tuyubaha kuko uzaza ntago azatinda kandi agapfa kaburiwen’impongo.
+`
   },
 
   {
@@ -861,7 +901,7 @@ lyrics: `1. Hahirwa abafite  inzira zijya I siyoni mu mitima yabo yemwe bene dat
 },
 {
   id: 93,
-  title: "93.MWABYARMWE BYOSE MWE NIMUYISHIME.",
+  title: "93.MWABYAREMWE BYOSE MWE NIMUYISHIME.",
   category: "Chorale",
   lyrics: `1. Mwa byaremwe byose mwe nimuyishime iyahanits ikirere ikadendeza amazi iyarmye izuba n’inyenyeri ishinga imfatiro zisi niyo gushimwa.
 
@@ -875,73 +915,109 @@ lyrics: `1. Hahirwa abafite  inzira zijya I siyoni mu mitima yabo yemwe bene dat
 },
 {
   id: 94,
-  title: "94.NYIR’URUKUNDO WADUKIJIJE",
+  title: "94.NARI NIHEBYE. (MWAMI WANJYE NDAGUSHIMA)",
   category: "Gukomera mu byago",
-  lyrics: `1. Nyir’urukundo wadukijije, wakunze isi kugeza utanze ubuzima bwawe, uri umucunguzi wacu. Reka dutange imibiri yacu ho ibitambo bizima.
+  lyrics: `                 MWAMI WANJYE NDAGUSHIMA x2
+                               IBYO WAKOZE BIRATANGAJE.
 
-Chorus: Yesu Mwami wacu, turagushima, twatariho watugiriye impuhwe, wadukunze utaratureba uko turi.
+1. Nari nihebye iyo ngiyo mu ishyamba unkuruza ineza uranyiyegereza urambwira uti byose birashoboka urambwira uti nkugize umwana wanjye.
 
-2. Twari twazimiye mu byaha, ariko wowe waducunguye uduha ubugingo bushya, tubaye abana b’Imana n’abaganza muri wowe.`
+                                  Chorus:  waranyitangiye aho inyabihanga umena amaraso ari kubwibyaha byanjye uranyuhagira unyambika ubwiza bwawe ndanogereye kubera urukundo rwawe.
+
+2. Igoyi z’umwanzi  waziciyemo kabiri ndatambuka abansi banjye barahunga kandi ndiyo ngiyo ngaho kucyavu uranzamura ungira igikomangoma.
+
+3. Ninayo mpamvu nzajya ngukorera kukondiyo ngiyo sinagukoreraga kandi umpe  imbaraga zo kurwana niyisi mana uzamfashe abaribyo bazakumenye.
+
+`
 },
 {
   id: 95,
-  title: "95.IJAMBO RY’IMANA NI UBUTABERA",
+  title: "95.MBEGA URUKUNDO RW’IMANA YACU",
   category: "Chorale",
-  lyrics: `1. Ijambo ry’Imana ni ubutabera, riratunganye, rirakiza, rirabohora, riraremamo ubuzima bushya abaryemera bose.
+  lyrics: `                               MWAMI WANJYE NDAGUSHIMA x2
+                               IBYO WAKOZE BIRATANGAJE.
 
-Chorus: Dufate Bibiliya, tuyirangurure, ijambo ry’Imana niryo rimurikira inzira zacu, riduha gusobanukirwa n’ukuri.
+1. Mbega urukundo rw’imana yacu ntawarondora uko rungana njye yarankunze ntamukwiriye niyo mpamvu mpora mushima narinihenye ntagir uwampoza ariko ubundarirmba.
 
-2. Rimwe ryavuzwe ntirigaruka ubusa, ahubwo risohoza ibyo ryatumweho. Twagire umwete wo kurirya, turitekerezeho ku manywa na nijoro.`
+                       Chorus:   urwo rukundo rwawe mwami yesu iyo ndwibutse rurandenga iyo nibutse ko ubu mba ntakiriho bintera guhora mushima
+
+2. Nari umutindi munsi yabandi nari umukene utagira kivurira ntanuwari kunkundira ko mubwira ibinduhije ariko yesu aca bugufi ndamubwira aranyumvira.
+
+3. Kandi uko ikunda umwana wayo njye ni ko inkunda ntakwiriye nari umugome nu kwimpa yesu ngo ambambirwe ku musaraba nzajya ndirimba urwo rukundo ndukwize mubanyamahanga.
+
+4. Umva nkubwire wowe wiganyira uhora urira warihebye ariko uwo nguwo siwo muti ibikugora ntibizabura wibuke ko yesu ariku musaraba yavuze ati rurarangiye.
+
+`
 },
 {
   id: 96,
-  title: "96.IBAMBE RYA GOLIGOTA",
+  title: "96. YEWE WA NYANJA WE ",
   category: "Chorale",
-  lyrics: `1. Ibambe rya Goligota niho twabonye amahoro, niho amaraso ya Yesu yavugiye imbabazi, niho urukundo rw’Imana rwagaragariye ku buryo budasubirwaho.
+  lyrics: `1. Yewe wa nyanja we nawe wamuraba we nimutuz niyambukire ndareba hakurya nkicwa nurukumbuzi nkumva naguruka nkinyoni.
 
-Chorus: Tuzahora twibuka ibambe, aho twabambirwaga icyaha, aho twahawe umunezero udashira, aho icyaha cyatsinzwe burundu.
+                                 Chorus:   njyewe nkumbuye isiyoni muri wa murwa wamahoro nkumbuye gutaha mu ijuru.
 
-2. Dore umusaraba uracyahari, utwibutsa agaciro k’amaraso ya Yesu, waducunguye, wadukijije, watugize intungane imbere y’Imana.`
+
+2. Ku misozi yigukundiro abagenzi barahageze maz bicwa nurukumbuzi barbye abiti byigikundiro byatewe kuruwo musozi bibatera kugikumbura.
+
+3. Icyo gihugu tubabwira nicy’amata n’ubuki natbibazo bikigeramo abaho bahora bishimye ni mumunezero uhoraho nawe ukumbure kuzabayo.
+`
 },
 {
   id: 97,
-  title: "97.SINDABURA GUSHIMA",
+  title: "97.TWEBWE ABAMAZE KUMENYA IJAMBO.",
   category: "Gukomera mu byago",
-  lyrics: `1. Sindabura gushima Uwiteka wankuye ahakomeye, akandamura mu gahinda, akantera gusubira gususuruka, akantera kuririmba.
+  lyrics: `1. Twebwe abamaze kumenya ijambo ry’imana gakondo iri mwijuru niho  duhora duhanze amaso dutegerej umukiza ko azaza.
 
-Chorus: Ndagushima Mwami wanjye, kuko wagize neza, sinari mbikwiriye ariko urukundo rwawe rwarampaye byose.
+                                   Chorus:   have we gucika intege guma mu nzira nubwo hari ibirangaza byakanya gatoya umwami araje aje gutabara abacitse intege. 
 
-2. Nahagaze ku munigo, sinari ngifite icyizere, ariko imbabazi zawe zarankomereje, none ndatemba mu byishimo by’Imana.`
+2.  Mugenzi komeza inzira urugendo rwawe nirurerure rurakomeye nubwo ugeze aho unaniwe ariko ihangane umukiza wa cu ari bugufi.
+
+3. Dufite gakondo yacu iri mwijuru cyo nguino nawe ukitwa none kandi niba ushidikanya wanga kwihana twe turaiye turagusize 
+
+                              Chorus:   yesu nafata igitabo cy cy’ubugingo agahamagara amazina yabe bose urahamyako ni ryawerizumvikanamo cyo ngaho isuzume ko iryaw ryanditswe.
+`
 },
 {
   id: 98,
-  title: "98.BAHIRE ABAKIRA IJAMBO",
+  title: "98.UMUKIRANUTSI AZASHISHA NKUMUKINDO",
   category: "Chorale",
-  lyrics: `1. Bahire abakira ijambo ry’Imana, bakarizigama mu mitima yabo, kuko riba imbuto zera ku gihe cyayo, rigatanga ubugingo.
+  lyrics: `1. Umukiranutsi azashisha nkumukindo wineber….azagira amakakama azahorana itoto azeramo.. nubusagwe.
 
-Chorus: Nibakomeze inzira y’ukuri, bakomeze kwizera, kuko uwabasezeranyije ni uwo kwizerwa, azabashitsa icyo yabavuzeho.
+                        Chorus:   hahirwa umuntu wizera uwiteka nawe akamubera ibyiringiro  azamubera nkigiti cyatewe kumugezi imigisha izamuzaho.
 
-2. Komeza wubahe ijambo, nturyibagirwe, nturyiteshe, kuko rikwigisha, rikanahana, rikagucyaha mu rukundo rw’Imana.`
+2. Ijisho ry’uwitka riri kub akiranutsi ugutwi kumva icyo basaba ntazicwa ninzara ntazasabiriza kuko uwiteka amwitayeho
+3. Icyampa abantu bose bakaba abakiranutsi kuko umukiranutsi uwiteka aramwubaha kandi akamwubahisha.
+
+`
 },
 {
   id: 99,
-  title: "99.SI UKO TWARI TUBIKWIYE",
+  title: "99.NAMANI UMUGABA W’INGABO ",
   category: "Gukomeza kwizera",
-  lyrics: `1. Si uko twari tubikwiriye, ahubwo ni imbabazi z’Imana, ni ubuntu bwayo bwatumye tugira ubugingo, ntitwabyishyura.
+  lyrics: `1. Namani umugaba w’ingabo z’umwami w’isiriya  yari umutoni ku mwami kandi akubahwa na bose ariko mu byubahiro bye yari afitemo ibibazo yari umugabo w’ibibembe.
 
-Chorus: Turayishima, turayisingiza, kuko urukundo rwayo ruruta byose, rudakuka, rudasaza, rudahemuka.
+                                    Chorus:   ngwino X2 banguka gira bwangu ngwinoX2 mumaraso ya yesu ngwinoX2 banguka gira bwangu arakubabarira aguhe amahoro. 
 
-2. Iyo turebye aho twavuye, tukareba aho tugeze, twemera ko Imana ari yo yabikoze, turayishimira iteka ryose.`
+2. Uwo mugabo azakumenya ko isamaliya ko hari umuhanuzi ubasha kumukiza umubabaro yari afite yihutira kumwereka umubiri we umubiri we ati’’ wibire muri yorodani incuro ndwi.
+
+3. Uwo mugabo azakugira ubwibone mu mutima yanga kwibira muri yorodani agirwa inama nabagragu ko ari ngombwa yibira mu mazi azamuka akize.
+`
 },
 {
   id: 100,
-  title: "100.YESU NI WE RUGERO RWANJYE",
+  title: "100.HARACYARI IBYIRINGIRO.",
   category: "Chorale",
-  lyrics: `1. Yesu ni we rugero rwanjye, nkurikira inzira ze z’ukuri, ndamukurikira, ndamwizera, ndamukunda kuko yankunze mbere.
+  lyrics: `1. Haracyari ibyiringiro ku bizera umwami imana urufatiro narwo ruracyariho wihangane yesu kristo niwe uturangaje imbere.
 
-Chorus: Nzamukurikira hose aho anyobora, sinzareka kuba uwe, kuko ari we wenyine utajya ahinduka, ni we shingiro ry’umutima wanjye.
+                        Chorus:   dore igihe kiraje ndetse kirasohoye ubwabasenga data mumwuka no mukuri arashaka ko abongabo bamusenga
 
-2. Nubwo inzira ishobora kuba igoye, sinzacika intege, kuko afite imigisha yiteguye kungororera, nkamubona uko ari.`
+2. Yemwe bantu b’imana mwese muri hano muze tuve mu byaha mbere dushakishe ibitabonshwa amaso y’umubiri aribyo byahishuriwe abera.
+
+3. Twebwe abasobanuriwe ibyagakiza bene data turasabwa kuba maso uko bukeye nuko bwije satani arashaka kutunyaga ubugingo bwacu.
+
+
+`
 },
 
   {
@@ -984,7 +1060,7 @@ Chorus: mwibuke sawuli nawe yarwanije abakozi b’imana akabapinga akabseka ndet
   },
   {
     id: 104,
-    title: "104.RKA TUBABEIRE IMANA NYAMANA",
+    title: "104.REKA TUBABEWIRE IMANA NYAMANA",
     category: "Chorale",
     lyrics: `1. Reka tubabwire imana nyamana niyo tangiriro ikaba niherezo iyo ikinze ntawe ukingura kandi yakinura ntuhagira ukinga.
 
@@ -1432,156 +1508,165 @@ Chorus: Nzabonayo by’abazima bihora bivuga ngo “Urera Mana.” Nzabonayo ba 
   },
   {
     id: 141,
-    title: "141.YESU YAPFUYE AZIZE IBYAWE",
+    title: "141.NABONYE  UMUKUNZI",
     category: "",
     lyrics: `
-1. Yesu yapfuye azize ibyawe, yitangiye ibyaha byawe. Uriho uyu munsi ni we mpamvu. Yagukijije urupfu rw'iteka.
+Chorus: Nabonye umukunzi ufite izina ryiza ni yesu utabara abarengana yemwe afite izina ryiza riruhura  abarushye iyo umutabaje aragutabara.
 
-Chorus: Mwami Yesu urakomeye, waranshumbuje urukundo. Witanze ntiwazuyaje, ndakomeza ngukurikire.
+1. Iryo zina ni ryiza niryo ngabo inkingira irya myambi ya satani ntingereho riruta andi mazina yose yo mwisi nryizra azabona ubugingo .
 
-2. Mbese wababarira abantu bose nk’uko Yesu yababariye? Azakwigisha kwihangana, kwicisha bugufi no gukunda.
-
-3. Azagaruka azana ibihembo, guhemba intungane zamwumviye. Ubwo ni bwo bugingo nyakuri – dutegereje Ijuru ryera.
+2. Mu isi yacu no mu ijuru ntazina nkirya yesu ntanirindi rya mpumuriza ntarindi ribasha kumara agahinda uretse iry’uwa tubambiwe .
     `
   },
   {
     id: 142,
-    title: "142.SADURAKA, MESHAGE NA BEDENEGO",
+    title: "142.MURAGIRE UMUKUMBI W’IMANA",
     category: "",
     lyrics: `
-1. Saduraka, Meshake na Abedenego, b’abahungu batatu b’abanyabwenge. Ntibigeze bunamira igishushanyo, ni yo mpamvu bamanuriwe mu muriro.
+1. Muragire umukumbi w’imana muwuragire nkabazawubazwa mubikore mubikunze mudahatwa kuko nyiri umurimo yiteguye guhemba abakoze neza bose.
 
-2. Ariko Yesu ntiyabatengushye, yamanutse ajya kubana na bo. Ababakongeresheje barumirwa, babonye umuntu wa kane ari kumwe na bo.
+                          Chorus: umutahiza ni yesu kandi ubwo azaboneka tuzahabwikamba ryubugingo ritangirika
 
-3. N’ubwo umuriro wari urya, ntibashye na gato, Yesu yarabarinze. Iyi ni inkuru yo kwizera, kutikanga igitotezo.
+2. Imana ntishaka ko muyikorera kubw’indamu mbi zanyu ahubwo irashaka ko muyikorera kubwumutima ukunze nimukore mukore ingororano zirahari zarateguwe.
+
+3. Namwe bayoborwa mugandukire abakuru mwese mwicishe bugufi imana yabga abibone kandi mube maso muganduke.
+
     `
   },
   {
     id: 143,
-    title: "143.ISOKO IVUBURA UBUZIMA",
+    title: "143.UMWAMI YESU KRISTO",
     category: "",
     lyrics: `
-1. Hari isoko ivubura ubuzima itemba idacika. Uwashonje wese aze anywe, azahazwa n’amazi yayo.
+1. Umwami yesu kristo niwe mujyanama wacu numufasha utabura kuboneka mumakuba
 
-Chorus: Iyi soko ni Yesu Kirisitu, ni we utanga ubugingo bw’iteka. Nta waza kuri we ngo abure, azamuha amazi amuhaza.
+                          Chorus: haba mubikomeye ndetse no mubyoroheje haba mungorane nyinshi ndetse kugeza kugupfa
+                                        Numufasha utabura kuboneka mumakuba.
 
-2. Iyo soko ntigira ibyondo, ntigira umwanda wo mw’isi. Ni isoko yera ituruka mu ijuru, yaje kuturokora twese.
+2. Inshuti nabavandimwe bashobora kuguhinduaka ariko mana uwo wakunze ntushobora kumutererana .
 
-3. Tuzayinywera ubuntu, ntidukeneye kuyigura. Urahari Yesu, turakwakira. Tunyweshe iyo soko yawe!
+3. Nubwo ubona bicitse wibaza uko ejo buzagenda ariko tuza umutima imana ibyo yavuze izabikora.
     `
   },
   {
     id: 144,
-    title: "144.WANKUNZE URI MUKIZA",
+    title: "144.DORE URUKUNDO IMANA YADUKUNZE.",
     category: "",
     lyrics: `
-1. Wankunze uri Mukiza, urankunda uri Umwami. Umpa amahoro n'ibyishimo, ukanshumbusha urukundo.
+1. Dore urukundo imana yadukunze rwatumye itanga umwana wayo wikinege kugirango umwizera wese atarimbuka ahubwo ahabwe ubugingo buhoraho.
 
-Chorus: Urumuri rwanjye ni wowe, umucyo wo mu nzira yanjye. Wambereye byose, sinzava ku rukundo rwawe.
+                  Chorus: twegukanye insinzi igorogota kumusaraba twarabo kurimbuka aa turababarirwa none iyisi dutuyemo yose yarababriwe amaraso yuwo mwami yesu yagize umumaro.
 
-2. Sinari nkwiriye kumpa agakiza, ariko wampaye ubuntu. Warandemye unyishyurira ibyanjye byose ku musaraba.
+2. Yaramanutse aza muri iy’isi arababazwa arashinyagurirwa kwari ukugirango njyewe nawe tubeho tubabarirwe tubone agakiza.
 
-3. Nzakomeza nkwiringire, nzagukurikira iteka. Nzahora nshima izina ryawe, Mwami Yesu mwiza wanjye.
+3. Non bene data turabana bimana uko tuzasa nti kurerekanwa icyo tuzi neza yesu niyerekanwa tuzasa nawekuko tuzamubona.
+
     `
   },
   {
     id: 145,
-    title: "145.IBAMBE RY’UMUSARABA",
+    title: "145.ABANA B’IMANA DUFITE GAKONDO",
     category: "",
     lyrics: `
-1. Ibambe ry’umusaraba ni ho naboneye agakiza. Ni ho amaraso yandekuye, akanduhura urubanza.
+1.  Abana b’imana dufite gakondo twateguriwe n’uwiteka iki kirere murimo kubona tuzagitumbagira tujye mu ijuru.
 
-Chorus: Ibambe, ibambe, aho Yesu yapfiriye. Ni ho nakuye amahoro, ni ho nahindutse mushya.
+                        Chorus: ni mumunezero iwacu n’amahoro
 
-2. Ijuru ryaracecetse, igihe Yesu yitambaga. Umwijima wagose isi yose, urupfu ruca urubanza.
+2. Nitugera mu ijuru tuzabona yesu ntituzonger akubabara ukundi tuzashira agahinda ntagusuhuza umutima kuko tuzaba tigeze ibudapfa.
 
-3. Ariko ibamba ryabaye intsinzi, ryatuguriye ubuzima. Twese abemera barakizwa, amaraso ye arabahagije.
+3. None bene data dufatanije urugendo nimwihangane tugiye kwambuka yorodani iriya iri mbere yacu tuzayinyuramo  dufate hakurya.
     `
   },
   {
     id: 146,
-    title: "146.REKA MPAGARARE HANO",
+    title: "146.ICYAKORA MUZAHABWA IMBARAGA",
     category: "",
     lyrics: `
-1. Reka mpagarare hano, aho nakuye agakiza. Ndashima Uwiteka wankijije, ankura aho nacumuriye.
+1. Ubwo umwami yesu yendaga kujya mu ijuru abigishwa bagize ubwoba bwinshi ariko arabahumuriza ati nimukomere nzabohererza umufasha wo kubafasha mubikomeye.
 
-Chorus: Hano ni ho nahindukiye, nava mu byaha ndakizwa. Reka mpagarare hano, ndirimbe indirimbo nshya.
+                       Chorus: icyakora muzahabwa imbaraga umwuka wera nabamanukira muzaba abagabo bo kumpamya hose isamariya niyudaya yose ee.
 
-2. Nari narataye inzira, ariko Yesu yarampamagaye. Yambwiye amagambo meza, ati “Garuka ndagukunda.”
+2. Abigishwa ba yesu bari hamwe bari hejuru mucyumba basenga bahuje umutima umuriri urabatungura batangira kuvuga mu ndimi nshya aa
 
-3. Ndabwira isi yose, ko Uwiteka ari uw’imbabazi. Reka mpagarare hano, mvuge imirimo ye myiza.
+3. None nimuze twubake kuriwe kuko niwe nzira nukuri nubugingo nubwo tunanizwa niy’isi dutuyemo muhumure yesu nibyose kubamufite eeee.
     `
   },
   {
     id: 147,
-    title: "147.NDARUHUKIYE MU MABOKO YAWE",
+    title: "147.YESU URI UMUKOZI W’UMUHANGA",
     category: "",
     lyrics: `
-1. Ndaruhukiye mu maboko yawe, Yesu, ni ho honyine mba ntuje. Sinzatinya ibigeragezo, kuko nzi ko ndi kumwe na we.
+1. Yesu ari umukozi w’umuhanga iyo ukinze ntawubasha gukingura iyo ukinguye ntawubasha gukinga uri intwari
 
-Chorus: Mu maboko yawe ni ho haruhuka umutima wanjye. Nta cyambuza amahoro, igihe ndi kumwe na we.
+                                             Chorus: nzahora nkuririmba nzahora nkubyinira nzahora ngutambira uruwera.
 
-2. Warankuye ahabi, unyambika ubwiza. Wampaye izina rishya, sinkiri imbohe y’ibyaha.
+2. Wigaragarije daniel  murwobo rw’intare  intare ntizamuriye kubwo gukomera kwawe saduraka meshake na bedenego mwitanura ryumuriro aho  naho mwami warigaragaje.
 
-3. Ndakomeza inzira yawe, sinzaca iburyo cyangwa ibumoso. Nzagera aho wampaye, aho haruhukira intore zawe.
+3. Nimuze turirimbire  uwiteka kuko ajya aturwanirira ishyaka nk’intwari mu ntambara zivuga arangurure ijwi rirenga ababisha bahunge mwizina rye ee.
     `
   },
   {
     id: 148,
-    title: "148.IGIHE CYO GUSENGA",
+    title: "148. AGAKIZA KARABONETSE",
     category: "",
     lyrics: `
-1. Igihe cyo gusenga ni nk’igihe cyo kuvugana n’Imana. Ni igihe cyo gusuka umutima, imbere y’Uwiteka wacu.
+1. Agakiza karabonetse ariko abantu benshi ntibanyemera bamwe muribo narabihinyura nyamara yesu ni we gakiza kacu .
 
-Chorus: Dusenge, dusenge, duhamagare Uwiteka. Igihe cyo gusenga ni bwo bugingo, niho duhabwa imbaraga.
+                                           Chorus: Yaje mube abe ntibamwemera yazanye umucyo umurika ahatabona yaje akiza indwara akuruhura abarushye  nukuri yesu niwe gakiza kacu.
 
-2. Yesu yigishije abigishwa be, abereka uko basenga. Yababwiye ko Data yumva, kandi ko akunda abamusaba.
+2. Yesu yaje kuruhura imvue zo mu mitima no kumnyesha umwaka w’imbabazi z’uwiteka ngwino umwakire aguhe agakiza kuko ubutware bwose buir kubitugu bye.
 
-3. Twemere gusenga iteka, ntitunanirwe kubikorera ku gihe. Uwiteka ahora yiteguye, yumva ijwi ryacu ryose.
+3. Mwijuru icyubahiro kiba icy’imanna yera kandi mwisi amahoro abe mubo yishimira hozana haleluya hashimwe  uje mwizina ry’uwiteka imana halelya usingizwe.
     `
   },
   {
     id: 149,
-    title: "149.NGUSHIMIYE YESU",
+    title: "149.KUGARUKA KWA YESU KRISTO",
     category: "",
     lyrics: `
-1. Ngushimiye Yesu wankijije, waranzwe n’urukundo. Wangiriye imbabazi ntakwiye, none ndashima izina ryawe.
+1. Kugaruka kwa yesu kristo nkumukiza guteye ubwoba  mu iyisi dutuymo ubwo bamwe bibwira ko atazaza ariko aza mu cyubahiro cye abihana ibyaha bakaguma mu nzira uwo mwami naza azabajyana iwe
 
-Chorus: Ngushimiye Mwami, sinkwiriye ibyo wampaye. Sinzibagirwa ineza yawe, nzagushima ubuziraherezo.
+                                Chorus: mutazmera nkibyabakobwa cumi biteguye kujya gusanganira umukwe umukwe atinze barahunikira  kuko bari barambiwe gutegereza
 
-2. Wambabaririye ibyaha byanjye, unyandikisha mu gitabo cy’ubugingo. Warankuye mu rwobo rw’umwijima, unyicaza n’abatoni.
+2. Ibibabi by’umutini iyo bitoshye impeshyi iba yegereje ibicu nabyo iyo bikubye  tumenyako imvura igiye kugwa ibimeneyetso byo kuza kwa yesu byarabonetse nimuze tube maso.
 
-3. Ngwino mwami umutima wanjye uwugirire urugo. Mbana nawe iteka ryose, mpore mvuga ngo ndagukunda.
+3. None nshuti bene data tube maso mwirinde cyane uko mugenda mutazagenda nkabatagira ubwenge kuko azaba aje guhemba no guhana.
     `
   },
   {
     id: 150,
-    title: "150.IRIBA RY'UBUGINGO",
+    title: "150.IMANA YACU TWIRNGIYE",
     category: "",
     lyrics: `
-1. Hari iriba ry’ubugingo, ritemba ritagabanuka. Ni ryo duhishurirwamo ubuntu, rikadusukaho imigisha.
+1. Imana yacu twiringiye udufashe muri ururugendo twugarijwe n’umubisha uturamburire ukuboko kwawe.
 
-Chorus: Iriba ry’ubugingo riracyafunguye, nta murongo usaba. Yesu aracyatumiye bose, ngo baze kunywa batishyura.
+                               Chorus: ntuduhishe mu maso yawe mwami duhumure amaso tukubone yesu uheshe izina ryawe icyubahiro naho ubwacu turi abanyantege nke.
 
-2. Iyo ugeze aho wumva wananiwe, iryo riba riraguhaza. Risukura umutima wawe, rigashyiramo umucyo mushya.
+2. Duhe ingabo idukungira tutagwa mubigoyi bya satani tugendane nawe yesu twambare intwaro z’umwuka wera.
 
-3. Turirimbe dushimira Imana, kuko iryo riba ryatugezeho. Tuzarinywera kugeza Ijuru, aho tuzatura iteka.
+3. Waduhaye isezerano ko utazadusiga habe namba umva uko tugutakira  uturamburire ukuboko kwawe tutagwi isari tutarangije uru rugendo twatangiye
     `
   },
 
 
   {
     id: 151,
-    title: "151.YESU WACU",
+    title: "151.AMAKUBA NDETSE NIBYAGO",
     category: "",
     lyrics: `
-1. Yesu wacu, urukundo rwawe rwose ruratwubaka. Wankunze urukundo rutavangura, urahora umbona.
+1. Amakuba ndetse nibyago by’umukiranutsi ni byinsi ariko uwiteka amukiza muri byose kurirango atagwa.
 
-Chorus: Yesu wacu, ni wowe nzira, ni wowe ukuri, ni wowe ubugingo. Tuzagukurikira, duhereye aho utwereka.
+                            Chorus: erega naho nagwa ntago nzarambarara nubwo turi mubutayu ntagi tuzabuhoramo.
 
-2. We witangiye abahagarariye ibibi byabo, kandi ushaka ko bagaruka. Tuzabana nawe, tutazigera tukwigora.
+2. Hahirwa abafite imana ya yakobo ho umutabazi iyo bagez mugikombe cyitwa baka bahahindura ahantu hamasoko’
 
-3. Urakomeye, urama igihagararo mu bwiza bwawe. Urahora uri hafi y’abakugannye, ntuzatubuze amahoro.
+                    Chorus: nimumwikomezeho niwe buye ryanzwe n’abantu ariko ku mana ryaratoranijwe riba irikomeza imfuruka.
+
+                      Ngwino X2 ngwino nawe 
+                      Ngwino kwa  yesu nawe arakwakira
+                     Arakunda afasha abashavuye
+                     Ntutinyishwe  nuko ufit ibyaha
+                       Ni umunyebambe yesu arakwakira.
     `
   },
   {
@@ -1628,13 +1713,273 @@ Chorus: Yesu wacu, ni wowe nzira, ni wowe ukuri, ni wowe ubugingo. Tuzagukurikir
 
 3. Uyu murimo turimo dukora tuwukorana umwete dufasha abakene tubikore tubikunze tutaye uko turi kuko imana itazatubaza ibyo tudafite.
     `
+  },  {
+    id: 155,
+    title: "HARUWABAMBWE",
+    category: "Urukundo rwa Yesu",
+    lyrics: `1. Haruwabambwe yemera kwitanga
+Yambaye ubumuntu kandi ari Umwana w’Imana
+Ni Yesu wenyine wemeye kubambwa
+Yari azi ko azarokora benshi
+
+Chorus:
+Nzamuramya kugeza ku iherezo
+Nzahimbaza izina rye iteka ryose
+Nzavuga ibyiza byose yankoreye
+Har’uwabambwe wemeye kwitanga
+
+2. Nubwo yari mu bwiza bwose bw’ijuru
+Yemeye kuza hano kw’isi yacu yangiritse
+Yapfiriye abari kure y’isezerano
+Kugira ngo abegereze ku Mana
+
+3. Ibyaha byanjye byose yabikorera
+Akarengane kose yagakiriye mu rukundo
+Urukundo rwe rurenze ubwenge bw’abantu
+Ni yo mpamvu nzahora mwiramya
+
+4. Igihe cyose nzaba nkiriho
+Sinzibagirwa igitambo cye cyo ku musaraba
+Azahora ari Mwami n’Umukiza wanjye
+Uwo mwami w’ineza n’urukundo`
+  },
+ {
+    id: 156,
+    title: "156.NIGIHE GITO",
+    category: "Guhimbaza",
+    lyrics: `1.Nigihe gitoya imibabaro igashira, abababaye bose bagiye guhozwa
+Amarira azashira, erega byose bizarangira ubwumwami wacu Yedu azaba aje gutwara umugeni we.
+
+chorus:Dore hahiriwe abamesa ibishura byabo mumaraso yumwana w’Imana
+kuko aribo bazakirwa n’Imana muri wamurwa yerusalemu.
+
+2.Dore ndabona ijuru rishya nisi nshya byiteguwe guturwamo nabera
+kandi ndabona umunezero kubazaba batsinze satani 
+Bridge:Bazaririmba bazanezerwa kukobazaba batsinze satani
+bazaririmba bazanezerwa kuko bazaba banesheje iyisi.
+`
+  },
+
+
+{
+    id: 157,
+    title: "157.EREGA NANGE",
+    category: "Ubuhamya",
+    lyrics: `1.Erega nange namenye neza ko ibyo wibwira Atari ibibi
+Imigambi yawe yose kuri ngwee ihora intangaza .
+                                          chorus:wowe uri Mana ikomeye urinda ijambo wavuze ibihe nibihe 
+                                          Ntabiriho ntanibizabaho byatuma umugambi wawe udasohora
+ 
+2.dufite ibimenyetso birenga kimwe byuko uzatugirira neza Mana. Wowe wambukije abisiraheri nanubu uracyakora
+wahaye umwana Sarah wumuhungu ubwo yarageze muzabukuru
+natwe dufite ibihamya byimirimo wadukoreye Mana nushimwe
+
+`
+  },
+ {
+    id: 158,
+    title: "158.IMBARAGA IKOMEYE",
+    category: "Guhimbaza",
+    lyrics: `1.Turavuga imbaraga ikomeye turavuga ijwi ry’Umwami imirimo yintokize niyo itumye dushima 
+niyo ikokora amashyamba ibipfukiranye bikeyuka niyo yubika imigambi yababi tugatambuka dushima
+
+                                              chorus:niyo ibasha gukora ibiruta cyane ibyo twe dutekereza muburyo bwabana babantu
+                                               ntabwo ijya ibeshya oya ntiyivuguruza ibyo yasezeranye nokubikora izabikora
+
+2.iryo jwi ryuwo mwami niryo riturisha imiraba ibitwasamiye bigatuza bigaceceka kubwizina rye 
+ibimeze nkimisozi imbere yuwo mwami birubama iryo jwi ryuwo mwami niryo rirema ibitariho
+
+
+`
+  },
+
+{
+    id: 159,
+    title: "159.GETSEMANI",
+    category: "Ubuhamya",
+    lyrics: `1.Ndibuka wamwanya mugetsemani aho mugashyamba aho Umwami wange yabiriye ibyuya 
+yarari gusenga ati
+ Mwami Mwami ikigikombe kindenge Mwami ntabara*2
+ 
+                                              Chorus:Ntacyotwabona tukwitura Mwami warakoze watubere igitambo gishimwa 
+                                              ubwintuma zintungura zarizishize 
+                                             twahawe kbohokera mumaraso ya Yesu*2
+
+2.Uwo Mwami yabanjirije igetsemani yarari kubona umubabaro witorero agiye kumenera amaraso 
+arataka ati Niba bishoboka Data ikigikombe kindenge Mwami niba bishoboka ikigikombe kindenge
+Mwami kindenge
+
+iyobitaza kuba amaraso yuwo Yesu
+ahange nawe uyumunsi ntihaba hakibukwa
+iyobitaza kuba inkoni yakubitiwe ibicumuro byacu
+ahange nawe uyumunsi ntihaba hakibukwa
+iyo bitaza kuba imisumari yatewe mubiganza
+ahange nawe uyumunsi ntihaba hakibukwa
+iyo bitaza kuba icumu yatewe murubavu
+ahange nawe uyumunsi ntihaba hakibukwa
+iyo bitaza kuba ikamba ryamahwa yambikiwe igorigota
+ahange nawe uyumunsi ntihaba hakibukwa
+`
+  },
+
+ {
+    id: 160,
+    title: "160.BAKUNDWA",
+    category: "Guhimbaza",
+    lyrics: `1.Bakundwa twasezeranyijwe umufasha ariwe mwuka
+uwomufasha azabana natwe kandi abamenyeshe iby’Ubwiru bwa Data
+
+                                                    Chorus:Uwomwuka Wera niwo twari dukeneye ngo atuyobore munzira yo gukiranuka 
+                                                    atumenyeshe iby’Ubwiru bwa Data atumenyeshe iby’Ubwiru bwa Data
+
+2.Abigishwa bari mumwanya umwe bahuje umutima bari mumwanya umwe nuko umuriri ubatunguye ubageraho bose
+batangira kuvuga indimi nshyashya.
+
+Bridge:Mwuka wera ngwino utwuzure
+mwuka w’Imana nganza kandi utegeke
+
+`
+  },
+
+ {
+    id: 161,
+    title: "161.UMUNSI UMWE",
+    category: "Urukundo rwa Yesu",
+    lyrics: `1.Umunsi umwe mariya nayozefu barihamwe barimaso bategereje Umwana 
+bahabwa umwana wumuhungu ariwe mwami.
+
+                                                          chorus:biramenyekana ko havutse umwami abantu bose bajya kumuramya 
+                                                          haleluya hashimwe umwami uje mwizina ry’Uwiteka Imana Amen!
+
+
+2.abanyabwenge bamurikiwe ninyenyeri bamenyako Umwami yavutse baravugana bati tugende kumuramya niwe ukwiriye gushimwa no gusingizwa kuko niwe Mwami w’Amahoro  iteka
+
+
+`
+  },
+
+ {
+    id: 162,
+    title: "162.IMIRIMO YAWE MANA",
+    category: "Guhimbaza",
+    lyrics: `1.Imirimo yawe Mana iragaragara twayibonesheje amaso yacu ntidufite ubwoba bwibihe ntidutinya uratuyoboye turashinganye turi kungoma yaahoro uratuyoboye turashinganye turikungoma yamahoro
+
+                                                                      chorus:Niwowe duhanze amaso urumutabazi*2
+                                                                     ugushikamijeho umutima wese ntacyo azaba
+ 
+2.Imitima yacu yuzuye amashimwe yibyo wadukoreye Manawe waratwimanye uturindira ubuzima
+ntiwabaye umuhigo 
+`
+  },
+
+  {
+    id: 163,
+    title: "163.REKA GUTINYA",
+    category: "Gusenga",
+    lyrics: `1.Reka gutinya wihangayika komera dufite Imana ikomeye itajya ineshwa yitwa rubasha, umuremyi, alupha na Omega
+mubwire ibyawe wizeye arabikora arabishoboye mubwire ibywawe wizeye arabikora arabishoboye
+
+
+2.Ibigeragezo nubwo aribyinshi ariko komera igihe CY’Imana iyo kigeze byose biratungana
+yozefu yarageragejwe intamara arazinesha kugezubwo aba igisonga cy;Umwami isezerano ry’Imana ubwo rira sohora
+
+Nibyo koko turi muri iyisi dufashe igihe muntambara ariko ibyo Imana yasezeranye byose azabikora wowe guma mumwanya wawe neza kandi ukomere
+isezerano ry’Imana nukuri rirasohora
+`
+  },
+
+  {
+    id: 164,
+    title: "164.BAKOZI KUMURIMO",
+    category: "Gusenga",
+    lyrics: `1.Bakozi kumurimo nibo Imana yishimira kunywa na nijoro ibihe byose ababikorana umwete bazagororerwa bazakirwa n’Imana mubwami bwayo
+                       
+      Chorus:Ingororano zinahari nimuhumure tuzahabwa ibyasezeranyijwe
+      n’Imana ihoraho.
+
+
+2.Ndababwira ukuri kwijambo ko umurimo wose werekejeho amaboko yawe uwukorane umwetee kandi umukore uwukunze
+
+hahirwa abapfa bapfira mu Mwami ntabwo bazagira ubwoba
+kuko Imirimo yabo izabherekeza no kumunsi ukomeye izibukwa.
+
+
+`
+  },
+
+ {
+    id: 165,
+    title: "165.NWIREMWA RY’UMUNTU",
+    category: "Agakiza",
+    lyrics: `
+1.Mwiremwa ry’Umwana wumuntu Imana yaravuze iti tureme Umuntu ase natwe atware ibirimwisi kandi ategeke byose bimwunvire
+ 
+2.Uwomuntu nkuko ubutware bwe buri arayobora ibintu byose biramwunvira n;Imana nayo imwitegereje ibonako adakwiriye kuba wenyine 
+ imuremera umufasha umukwiriye ngo babane ibihe byose*2
+Uwo muntu nkuko ubutware bwe buri arayobora ibintu byose biramwunvira n’Imana nayo imwitegereje iramusinziriza imukuramo urubavu
+imuremera umufasha umukwiriye ngo babane ibihe byose*2
+
+Bridge:tubifurije amahoro nimigisha
+Muribyose Imana izabane namwe.
+`
+  },
+  {
+    id: 166,
+    title: "166.UGIRA NEZA",
+    category: "Guhimbaza",
+    lyrics: `1.Ugira neza uri umunyembabazi ineza yawe irahebuje urukundo rwawe ntirugira akagero nirwo rwaduhesheje Umwana w’Imana
+
+2.Nikodemu asanga umwana w’Imana nijoro aramubwira ati mwigisha tuziko wavuye ku Mana kandi ntawubasha
+gukora ibimenyetso nkibyawe keretse Imana yonyine irikumwe nawe ertse Imana yonyine irikumwe nawe
+ Yesu aramubwira ati 
+nukuri ndababwira yuko umuntu wese utabywawe ubwa Kabiri atabona ubwami bw’Imana
+
+Bridge:Niwemera akakubabarira
+urabona ubwami bw’Imana
+Niwemera akakubatura  
+urabona ubwami bw’Imana
+Niwemera akakubera Umwami numukiza
+urabona ubwami bw’Imana
+`
+  },
+  {
+    id: 167,
+    title: "167.TURI MURUGENDO",
+    category: "Urukundo rwa Yesu",
+    lyrics: `1.Turi murugendo rugana Mwijuru niho dusihanirwa kugerayo
+hari uturimbere ni Umubasha ukomeye afite imbaraga arakomeye
+
+hararabagirana hahorayo umucyo hariyo Amahoro hahorayo Ibyishimo hazabayo kuramya no guhimbaza Imana 
+tuzakinagira tubonye Umukiza tuzaririmba izabanrsheje.
+
+2.Tugezeyo izahanagura amarira ntihazabayo intambara ukundi
+ntamarira azabayo ukundi
+iyicara kuri ya ntebe iravuga iti dore byose ndabihindura bibe bishya
+Tuzakinagira tubonye umukiza tuzaririmba izabanesheje
+`
+  },
+  {
+    id: 168,
+    title: "168.HARIHO IZINA",
+    category: "Urukundo rwa Yesu",
+    lyrics: `1.Hariho izina tuboneramo agakiza niho amahanga yose ahurira tukaba umwe n’Imana
+kubwo iryozina twarbohowe ntarubanzaruturiho*2
+
+2.Kera ntitwari ubwoko none ubu turi ubwoko
+ntitwari tuzi Imana ruremo nonubu twigijwe hafi
+
+nttukiri abashyitsi murugo ahubwo turi Abana b’Imana.
+
+`
   }
+
+
 
 
  ];
 
 
-    let currentPage = 1;
+ let currentPage = 1;
     const songsPerPage = 10;
     let filteredSongs = songs;
 
@@ -1687,6 +2032,34 @@ Chorus: Yesu wacu, ni wowe nzira, ni wowe ukuri, ni wowe ubugingo. Tuzagukurikir
     }
 
     renderSongs();
+
+    // Install prompt
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const installBtn = document.createElement('button');
+      installBtn.textContent = 'Shyira kuri Telefone';
+      installBtn.style.position = 'fixed';
+      installBtn.style.bottom = '10px';
+      installBtn.style.right = '10px';
+      installBtn.style.zIndex = '1000';
+      document.body.appendChild(installBtn);
+      installBtn.onclick = () => {
+        installBtn.remove();
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(choiceResult => {
+          deferredPrompt = null;
+        });
+      };
+    });
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
   </script>
 </body>
 </html>
+
